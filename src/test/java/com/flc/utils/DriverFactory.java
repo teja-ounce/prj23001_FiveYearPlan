@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 
 public class DriverFactory {
 	private static WebDriver driver;
@@ -16,10 +17,12 @@ public class DriverFactory {
 			System.setProperty("webdriver.edge.driver", path);
 			driver = new EdgeDriver();
 
-//			WebDriverManager.chromedriver().setup();
-
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
+			EdgeOptions options = new EdgeOptions();
+	        options.addArguments("--headless"); // Run in headless mode
+	        options.addArguments("--disable-gpu"); // Disable GPU (often used with headless)
+	        options.addArguments("--no-sandbox"); 
 		}
 		return driver;
 	}
