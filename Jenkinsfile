@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        EDGE_DRIVER_PATH = 'C:/Program Files (x86)/Microsoft/Edge/Application/msedgedriver.exe'
+        EDGE_DRIVER_PATH = 'C:/Users/Teja-OUNCE/OneDrive - proounce.com/Documents/GitHub/prj231001CucumberBDD/src/test/resources/files/msedgedriver.exe'
     }
     
     stages {
