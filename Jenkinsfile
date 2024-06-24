@@ -9,13 +9,13 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the Git repository
-                git url: 'https://github.com/teja-ounce/prj23001FiveYearPlan.git', credentialsId: 'GitLogin'
+                git url: 'https://github.com/teja-ounce/prj23001_cucumber.git', credentialsId: 'GitLogin'
             }
         }
 
         stage('Build') {
             steps {
-                dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD/') {
+                dir('C:/Users/Teja-OUNCE/OneDrive - proounce.com/Documents/GitHub/prj231001CucumberBDD') {
                     // Build the project using Maven
                     bat 'mvn clean install'
                 }
@@ -24,7 +24,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD/') {
+                dir('C:/Users/Teja-OUNCE/OneDrive - proounce.com/Documents/GitHub/prj231001CucumberBDD') {
                     // Run tests using Maven
                     bat 'mvn test'
                 }
@@ -33,7 +33,7 @@ pipeline {
 
         stage('Allure Report') {
             steps {
-                dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD/') {
+                dir('C:/Users/Teja-OUNCE/OneDrive - proounce.com/Documents/GitHub/prj231001CucumberBDD') {
                     // Generate Allure report
                     bat 'allure generate target/allure-results --clean'
                 }
