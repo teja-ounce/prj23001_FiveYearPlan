@@ -36,7 +36,7 @@ pipeline {
         }
         stage('Allure Report') {
             steps {
-                dir('https://github.com/teja-ounce/prj23001_cucumber.git') {
+                dir('C:/Users/Teja-OUNCE/OneDrive - proounce.com/Documents/GitHub/prj231001CucumberBDD/allure-results') {
                     bat 'allure generate target/allure-results --clean'
                 }
             }
