@@ -19,7 +19,7 @@ pipeline {
             steps {
                 dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
                     bat """
-                    set WEB_DRIVER_PATH=%EDGE_DRIVER_PATH%
+      
                     mvn test
                     """
                 }
