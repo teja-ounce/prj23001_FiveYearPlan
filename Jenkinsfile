@@ -6,7 +6,14 @@ pipeline {
                 git url: 'https://github.com/teja-ounce/prj23001_cucumber.git', credentialsId: 'GitLogin'
             }
         }
-
+	 stage('Build') {
+            steps {
+                dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
+                    bat 'mvn clean install'
+                }
+            }
+        }
+	
        
         stage('Test') {
             steps {
