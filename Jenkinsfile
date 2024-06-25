@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        EDGE_DRIVER_PATH = 'C:/Users/Teja-OUNCE/OneDrive - proounce.com/Documents/GitHub/prj231001CucumberBDD/src/test/resources/files/msedgedriver.exe' // Adjust as needed
+        EDGE_DRIVER_PATH = 'C:/Users/Teja-OUNCE/Software/edgedriver_win64/msedgedriver.exe' // Adjust as needed
     }
     stages {
         stage('Checkout') {
