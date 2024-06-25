@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD', credentialsId: 'GitLogin'
+                git url: 'https://github.com/teja-ounce/prj23001_cucumber.git', credentialsId: 'GitLogin'
             }
         }
 
