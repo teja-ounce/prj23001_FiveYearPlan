@@ -35,17 +35,5 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
-                archiveArtifacts artifacts: 'target/*.jar', allowEmptyArchive: true
-                junit 'target/surefire-reports/*.xml'
-            }
-        }
-        failure {
-            mail to: 'tej540840@gmail.com',
-                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                 body: "Something is wrong with ${env.BUILD_URL}"
-        }
-    }
+   
 }
