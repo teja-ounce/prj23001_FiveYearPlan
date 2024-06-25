@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        EDGE_DRIVER_PATH = 'C:/Users/Teja-OUNCE/Software/edgedriver_win64/msedgedriver.exe'
+        EDGE_DRIVER_PATH = 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'
         M2_HOME = 'C:/Users/Teja-OUNCE/Software/Maven/apache-maven-3.9.7'  // Update with the actual path to your Maven installation
         PATH = "${env.PATH};${env.M2_HOME}/bin"
     }
