@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        EDGE_DRIVER_PATH = 'C:/Users/Teja-OUNCE/Software/edgedriver_win64/msedgedriver.exe'
-    }
     stages {
         stage('Checkout') {
             steps {
