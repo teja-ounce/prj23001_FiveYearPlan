@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/teja-ounce/prj23001FiveYearPlan.git', credentialsId: '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'
+                git url: 'https://github.com/teja-ounce/prj23001FiveYearPlan.git', credentialsId: 'GitLogin'
             }
         }
 
@@ -33,7 +33,7 @@ pipeline {
         stage('Allure Report') {
             steps {
                 dir('https://github.com/teja-ounce/prj23001_cucumber.git') {
-                    bat 'allure generate target/allure-results --clean'
+                    bat 'allure generate /allure-results --clean'
                 }
             }
         }
