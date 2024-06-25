@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class DriverFactory {
 	private static WebDriver driver;
 	private static String path = "C:\\Users\\Teja-OUNCE\\OneDrive - proounce.com\\Documents\\GitHub\\prj231001CucumberBDD\\src\\test\\resources\\files\\msedgedriver.exe";
@@ -14,7 +16,8 @@ public class DriverFactory {
 	public static WebDriver getDriver() {
 		if (driver == null) {
 
-			System.setProperty("webdriver.edge.driver", path);
+//			System.setProperty("webdriver.edge.driver", path);
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
