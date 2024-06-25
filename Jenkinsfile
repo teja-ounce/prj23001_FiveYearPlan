@@ -38,17 +38,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            // Adjust the path to where the test reports are generated
-            archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
-            junit 'C:/Users/Teja-OUNCE/OneDrive - proounce.com/Documents/GitHub/prj231001CucumberBDD/target/surefire-reports/*.xml'
-        }
-        failure {
-            mail to: 'tej540840@gmail.com',
-                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                 body: "Something is wrong with ${env.BUILD_URL}"
-        }
-    }
 }
