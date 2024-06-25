@@ -22,7 +22,6 @@ public class DriverFactory {
 	public static WebDriver getDriver() {
 		if (driver == null) {
 
-//			System.setProperty("webdriver.edge.driver", path);
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 

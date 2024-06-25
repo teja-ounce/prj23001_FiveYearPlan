@@ -22,7 +22,7 @@ pipeline {
             steps {
                 dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
                     bat """
-                        mvn test -Dwebdriver.edge.driver=%EDGE_DRIVER_PATH%
+                        mvn test
                     """
                 }
             }
@@ -30,7 +30,7 @@ pipeline {
         stage('Allure Report') {
             steps {
                 dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
-                    bat 'allure generate target/allure-results --clean'
+                    bat 'allure generate /allure-results --clean'
                 }
             }
         }
