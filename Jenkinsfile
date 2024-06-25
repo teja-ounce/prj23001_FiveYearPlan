@@ -1,18 +1,18 @@
 pipeline {
     agent any
     environment {
-        EDGE_DRIVER_PATH = '//Users/Public/Downloads/edgedriver_win64/msedgedriver.exe' // Adjust as needed
+        EDGE_DRIVER_PATH = 'C:/Users/Public/Downloads/edgedriver_win64/msedgedriver.exe' // Adjust as needed
     }
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/teja-ounce/prj23001_cucumber.git', credentialsId: 'GitLogin'
+                git url: 'C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD', credentialsId: 'GitLogin'
             }
         }
 
         stage('Build') {
             steps {
-                dir('https://github.com/teja-ounce/prj23001_cucumber.git') {
+                dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
                     bat 'mvn clean install'
                 }
             }
@@ -20,7 +20,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                dir('https://github.com/teja-ounce/prj23001_cucumber.git') {
+                dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
                     // Set the EdgeDriver system property
                     bat """
                     set WEB_DRIVER_PATH=%EDGE_DRIVER_PATH%
@@ -32,10 +32,18 @@ pipeline {
 
         stage('Allure Report') {
             steps {
-                dir('https://github.com/teja-ounce/prj23001_cucumber.git') {
+                dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
                     bat 'allure generate /allure-results --clean'
                 }
             }
         }
+        stage('List Directory') {
+    steps {
+        dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
+            bat 'dir'
+        }
+    }
+}
+        
     }
 }
