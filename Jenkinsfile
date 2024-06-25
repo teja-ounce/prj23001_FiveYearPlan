@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        EDGE_DRIVER_PATH = 'C:/Users/Public/Downloads/edgedriver_win64/msedgedriver.exe' // Adjust as needed
+        EDGE_DRIVER_PATH = '//Users/Public/Downloads/edgedriver_win64/msedgedriver.exe' // Adjust as needed
     }
     stages {
         stage('Checkout') {
