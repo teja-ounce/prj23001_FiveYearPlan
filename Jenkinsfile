@@ -1,12 +1,12 @@
 pipeline {
     agent any
     environment {
-        EDGE_DRIVER_PATH = 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe' // Adjust as needed
+        EDGE_DRIVER_PATH = 'C:/Users/Teja-OUNCE/Software/edgedriver_win64/msedgedriver.exe'
     }
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/teja-ounce/prj23001_cucumber.git', credentialsId: 'GitLogin'
+                git url: 'https://github.com/teja-ounce/prj23001FiveYearPlan.git', credentialsId: 'GitLogin'
             }
         }
 
@@ -21,7 +21,6 @@ pipeline {
         stage('Test') {
             steps {
                 dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
-                    // Set the EdgeDriver system property
                     bat """
                     set WEB_DRIVER_PATH=%EDGE_DRIVER_PATH%
                     mvn test
@@ -33,17 +32,23 @@ pipeline {
         stage('Allure Report') {
             steps {
                 dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
-                    bat 'allure generate /allure-results --clean'
+                    bat 'allure generate target/allure-results --clean'
                 }
             }
         }
-        stage('List Directory') {
-    steps {
-        dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
-            bat 'dir'
-        }
     }
-}
-        
+
+    post {
+        always {
+            dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
+                archiveArtifacts artifacts: 'target/*.jar', allowEmptyArchive: true
+                junit 'target/surefire-reports/*.xml'
+            }
+        }
+        failure {
+            mail to: 'tej540840@gmail.com',
+                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+                 body: "Something is wrong with ${env.BUILD_URL}"
+        }
     }
 }
