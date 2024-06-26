@@ -52,11 +52,23 @@ public class DashboardObject extends BaseClass {
 
 	@FindBy(xpath = "//*[@id='simple-menu']/div[3]/ul/li[3]")
 	public WebElement logout;
+	
+	@FindBy(xpath = "//*[@id='single-spa-application:@flc/fiveyearplan-app']/div/header/div/div/div/div[3]/button")
+	public WebElement userChangeButton;
+	
+	@FindBy(xpath = "//*[@id='shareViaEmail']/div/div/div/div/label[2]/span[1]/input")
+	public WebElement adminButton;
+	
+	
 
-	public void clickFiveYearPlan() {
+	public void clickFiveYearPlan() throws InterruptedException {
 		fiveYearPlanButton.click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(outerName));
+		userChangeButton.click();
+		Thread.sleep(2000);
+		adminButton.click();
+		Thread.sleep(2000);
 	}
 
 	public void clickConsolidateStatement() throws InterruptedException {
