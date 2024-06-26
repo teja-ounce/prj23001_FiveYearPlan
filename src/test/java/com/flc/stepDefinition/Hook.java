@@ -25,11 +25,8 @@ public class Hook {
 			if (driver instanceof TakesScreenshot) {
 				final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 				scenario.attach(screenshot, "image/png", "Screenshot");
+				DriverFactory.quitDriver();
 			}
-		}
-		// Quit the WebDriver instance
-		if (driver != null) {
-			DriverFactory.quitDriver();
 		}
 	}
 

@@ -19,6 +19,7 @@ public class DriverFactory {
 	@FindBy(name = "usernameOrEmail")
 	public static WebElement usernameField;
 	@SuppressWarnings("deprecation")
+	
 	public static WebDriver getDriver() {
 		if (driver == null) {
 
@@ -36,7 +37,7 @@ public class DriverFactory {
 
 	public static void quitDriver() {
 		if (driver != null) {
-			driver.close();
+			driver.quit();
 		}
 	}
 
