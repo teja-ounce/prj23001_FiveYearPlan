@@ -41,7 +41,7 @@ public class LoginObject extends BaseClass {
 		driver.navigate().to(baseURL);
 		driver.manage().window().maximize();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(usernameField));
+		wait.until(ExpectedConditions.visibilityOf(usernameField));
 	}
 
 	public void enterUsername() {
