@@ -24,9 +24,7 @@ public class DriverFactory {
 
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-//			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-			wait.until(ExpectedConditions.visibilityOf(usernameField));
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
 			EdgeOptions options = new EdgeOptions();
 	        options.addArguments("--headless"); // Run in headless mode
