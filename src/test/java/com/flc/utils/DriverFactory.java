@@ -31,7 +31,7 @@ public class DriverFactory {
 			driver.manage().window().maximize();
 			EdgeOptions options = new EdgeOptions();
 	        options.addArguments("--headless"); // Run in headless mode
-	        options.addArguments("--disable-gpu"); // Disable GPU (often used with headless)
+	        options.addArguments("--disable-dev-shm-usage"); // Disable GPU (often used with headless)
 	        options.addArguments("--no-sandbox"); 
 		}
 		return driver;
