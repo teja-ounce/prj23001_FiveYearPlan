@@ -28,7 +28,7 @@ pipeline {
         stage('Allure Report') {
             steps {
                 dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
-                     bat 'allure generate allure-results --clean -o target/allure-report'
+                     bat 'allure generate allure-results --clean -o /allure-results'
                 }
             }
         }
