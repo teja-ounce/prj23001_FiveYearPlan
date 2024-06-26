@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD/src/test/resources/features') {
+                dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD/') {
                     bat "mvn test -Dwebdriver.edge.driver=${EDGE_DRIVER_PATH}"
                 }
             }
