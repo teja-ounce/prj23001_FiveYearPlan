@@ -1,9 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        label 'jenkins-agent'  // Replace with the label of your Jenkins agent
+    }
     environment {
-        EDGE_DRIVER_PATH = 'C:/Users/Teja-OUNCE/Software/edgedriver_win64/msedge.exe'
-        M2_HOME = 'C:/Users/Teja-OUNCE/Software/Maven/apache-maven-3.9.7'  // Update with the actual path to your Maven installation
-        PATH = "${env.PATH};${env.M2_HOME}/bin"
+        EDGE_DRIVER_PATH = 'C:/Users/Teja-OUNCE/Software/edgedriver_win64/msedgedriver.exe'
     }
     stages {
         stage('Checkout') {
@@ -21,19 +21,16 @@ pipeline {
         stage('Test') {
             steps {
                 dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
-                    bat """
-                        mvn test
-                    """
+                    bat "mvn test -Dwebdriver.edge.driver=${EDGE_DRIVER_PATH}"
                 }
             }
         }
         stage('Allure Report') {
             steps {
                 dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
-                    bat 'allure generate /allure-results --clean'
+                    bat 'allure generate target/allure-results --clean'
                 }
             }
         }
     }
-   
-}
+    }
