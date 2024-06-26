@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
-	private static WebDriver driver;
+	private static WebDriver driver; 
 	private static String path = "C:\\Users\\Teja-OUNCE\\OneDrive - proounce.com\\Documents\\GitHub\\prj231001CucumberBDD\\src\\test\\resources\\files\\msedgedriver.exe";
 	@FindBy(name = "usernameOrEmail")
 	public static WebElement usernameField;
@@ -24,10 +24,9 @@ public class DriverFactory {
 
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-			wait.until(ExpectedConditions.visibilityOf(usernameField));
+//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//			wait.until(ExpectedConditions.visibilityOf(usernameField));
 			driver.manage().window().maximize();
 			EdgeOptions options = new EdgeOptions();
 	        options.addArguments("--headless"); // Run in headless mode
