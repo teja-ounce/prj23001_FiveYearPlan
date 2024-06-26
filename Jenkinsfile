@@ -13,21 +13,21 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
+                dir('C:/Users/Teja-OUNCE/OneDrive - proounce.com/Documents/GitHub/prj231001CucumberBDD') {
                     bat 'mvn clean'
                 }
             }
         }
         stage('Test') {
             steps {
-                dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD/') {
+                dir('C:/Users/Teja-OUNCE/OneDrive - proounce.com/Documents/GitHub/prj231001CucumberBDD') {
                    bat "mvn test -Dcucumber.options=\"src/test/resources/features\" -Dwebdriver.edge.driver=${EDGE_DRIVER_PATH}"
                 }
             }
         }
         stage('Allure Report') {
             steps {
-                dir('C:/Users/Teja-OUNCE/git/repository/prj231001CucumberBDD') {
+                dir('C:/Users/Teja-OUNCE/OneDrive - proounce.com/Documents/GitHub/prj231001CucumberBDD') {
                      bat 'allure generate allure-results --clean'
                 }
             }
