@@ -27,6 +27,8 @@ public class Hook {
 				scenario.attach(screenshot, "image/png", "Screenshot");
 				DriverFactory.quitDriver();
 			}
+		} else {
+			DriverFactory.quitDriver();
 		}
 	}
 
