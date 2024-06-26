@@ -17,7 +17,7 @@ public class DashboardSteps {
 	private DashboardObject dashboardObject = new DashboardObject(driver);
 
 	@When("User clicks on five year plan button")
-	public void User_clicks_on_five_year_plan_button() {
+	public void User_clicks_on_five_year_plan_button() throws InterruptedException {
 		dashboardObject.clickFiveYearPlan();
 	}
 
