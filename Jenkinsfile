@@ -31,6 +31,7 @@ agent {
                 dir('C:/Users/proou/eclipse-workspace/prj23001_cucumber-master/prj23001_cucumber-master') {
                      bat 'allure generate allure-results --clean'
                 }
+                }
             }
         }
         post {
@@ -43,4 +44,4 @@ agent {
    		 }
  	 }
   }
- }
+ 
