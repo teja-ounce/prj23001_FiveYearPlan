@@ -17,9 +17,11 @@ public class DataSourcesObject extends BaseClass {
 		super(driver);
 	}
 
-	public String wordFile = "C:\\Users\\Teja-OUNCE\\eclipse-workspace\\prj231001CucumberBDD\\src\\test\\resources\\files\\testingPurpose.docx";
-	public String excel = "C:\\Users\\Teja-OUNCE\\git\\repository\\prj231001CucumberBDD\\src\\test\\resources\\files\\testingExcel.xlsx";
-
+	public String wordFile = "C:\\Users\\proou\\eclipse-workspace\\prj23001_cucumber-master\\prj23001_cucumber-master\\src\\test\\resources\\files\\testingPurpose.docx";
+	public String excel = "C:\\Users\\proou\\eclipse-workspace\\prj23001_cucumber-master\\prj23001_cucumber-master\\src\\test\\resources\\files\\testingExcel.xlsx";
+	
+	
+	
 	@FindBy(xpath = "//*[@id='single-spa-application:@flc/core-app']/div/div[1]/div[2]/div/div/div/div[4]/div/div[2]")
 
 	public WebElement fiveYearPlanbtn;
