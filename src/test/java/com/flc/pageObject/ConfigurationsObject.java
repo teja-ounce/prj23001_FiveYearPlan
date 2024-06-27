@@ -583,7 +583,7 @@ public class ConfigurationsObject extends BaseClass {
 				deleteCenterButton.click();
 				Thread.sleep(1000);
 				conformationDeleteButton.click();
-				Thread.sleep(6000);
+				Thread.sleep(7000);
 			}
 		}
 
@@ -638,7 +638,7 @@ public class ConfigurationsObject extends BaseClass {
 		deleteUserButton.click();
 		Thread.sleep(1000);
 		conformationDeleteButton.click();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 
 	}
 // Business mangers
@@ -688,7 +688,7 @@ public class ConfigurationsObject extends BaseClass {
 			deleteManagerButton.click();
 			Thread.sleep(1000);
 			conformationDeleteButton.click();
-			Thread.sleep(6000);
+			Thread.sleep(7000);
 
 		}
 	}
@@ -772,7 +772,7 @@ public class ConfigurationsObject extends BaseClass {
 			deleteTargetButton.click();
 			Thread.sleep(1000);
 			conformationDeleteButton.click();
-			Thread.sleep(6000);
+			Thread.sleep(7000);
 
 		}
 	}
@@ -823,7 +823,7 @@ public class ConfigurationsObject extends BaseClass {
 			deleteInflationButton.click();
 			Thread.sleep(1000);
 			conformationDeleteButton.click();
-			Thread.sleep(6000);
+			Thread.sleep(7000);
 		}
 	}
 
@@ -877,7 +877,7 @@ public class ConfigurationsObject extends BaseClass {
 				deleteProcessFTEButton.click();
 				Thread.sleep(1000);
 				conformationDeleteButton.click();
-				Thread.sleep(6000);
+				Thread.sleep(7000);
 			}
 		}
 	}
@@ -928,7 +928,7 @@ public class ConfigurationsObject extends BaseClass {
 			deleteCarryOverButton.click();
 			Thread.sleep(1000);
 			conformationDeleteButton.click();
-			Thread.sleep(6000);
+			Thread.sleep(7000);
 		}
 	}
 //Miscellaneous adjustment
@@ -988,7 +988,7 @@ public class ConfigurationsObject extends BaseClass {
 				deleteMiscellaneousButton.click();
 				Thread.sleep(1000);
 				conformationDeleteButton.click();
-				Thread.sleep(6000);
+				Thread.sleep(7000);
 			}
 		}
 	}
@@ -1022,7 +1022,7 @@ public class ConfigurationsObject extends BaseClass {
 			deleteRecoveriesButton.click();
 			Thread.sleep(1000);
 			conformationDeleteButton.click();
-			Thread.sleep(3000);
+			Thread.sleep(7000);
 			outsideAddInflationInputsButton.click();
 			Thread.sleep(3000);
 
@@ -1047,14 +1047,14 @@ public class ConfigurationsObject extends BaseClass {
 		deleteRecoveriesButton.click();
 		Thread.sleep(1000);
 		conformationDeleteButton.click();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 	}
 
 	public void recoveriesCopy() throws InterruptedException {
 		deleteRecoveriesButton.click();
 		Thread.sleep(1000);
 		conformationDeleteButton.click();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 	}
 //Allocation Categories
 
@@ -1098,7 +1098,7 @@ public class ConfigurationsObject extends BaseClass {
 		deleteAllocationButton.click();
 		Thread.sleep(1000);
 		conformationDeleteButton.click();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 	}
 
 //Inflation categories
@@ -1218,7 +1218,7 @@ public class ConfigurationsObject extends BaseClass {
 		lookupDeleteButton.click();
 		Thread.sleep(1000);
 		conformationDeleteButton.click();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 	}
 //Email templates
 	
@@ -1265,7 +1265,7 @@ public class ConfigurationsObject extends BaseClass {
 		emailDeleteButton.click();
 		Thread.sleep(1000);
 		conformationDeleteButton.click();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 	}
 
 //Settings
@@ -1310,7 +1310,7 @@ public class ConfigurationsObject extends BaseClass {
 		SettingDeleteButton.click();
 		Thread.sleep(1000);
 		conformationDeleteButton.click();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 	}
 	
 //Profiles
@@ -1383,7 +1383,7 @@ public class ConfigurationsObject extends BaseClass {
 		deleteProfileButton.click();
 		Thread.sleep(1000);
 		conformationDeleteButton.click();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 	}
 	
 //Distribution
@@ -1447,7 +1447,7 @@ public class ConfigurationsObject extends BaseClass {
 		deleteDistributionDetailsButton.click();
 		Thread.sleep(1000);
 		conformationDeleteButton.click();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 	}
 	
 	
