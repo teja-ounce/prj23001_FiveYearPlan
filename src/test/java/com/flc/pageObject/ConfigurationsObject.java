@@ -1233,15 +1233,14 @@ public class ConfigurationsObject extends BaseClass {
 	
 	public void clickAddEmailButton() throws InterruptedException {
 		addEmailButton.click();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		
 	}
 	public void fillTemplateDetails() throws InterruptedException {
 		
 		templateName.sendKeys("Testing");
 		templateSubject.sendKeys("Testing purpose");
-		Thread.sleep(1000);
-		
+		Thread.sleep(3000);
 		emailBody.click();
 		emailBody.sendKeys(Keys.ENTER);
 		Thread.sleep(1000);
@@ -1252,8 +1251,8 @@ public class ConfigurationsObject extends BaseClass {
 	public void clickEmailSaveButton() throws InterruptedException {
 		emailSaveButton.click();
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait1.until(ExpectedConditions.elementToBeClickable(emailTemplateButton));
-		Thread.sleep(3000);
+		wait1.until(ExpectedConditions.visibilityOf(emailTemplateButton));
+		Thread.sleep(5000);
 	}
 	
 	

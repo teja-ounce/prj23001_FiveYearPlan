@@ -33,5 +33,12 @@ agent {
                 }
             }
         }
+        post {
+        always {
+            dir('C:/Users/proou/eclipse-workspace/prj23001_cucumber-master/prj23001_cucumber-master') {
+                bat 'allure generate allure-results --clean -o allure-report'
+                archiveArtifacts artifacts: 'allure-report/**', allowEmptyArchive: true
+                junit 'target/surefire-reports/*.xml'
+            }
     }
     }

@@ -137,11 +137,11 @@ public class DataSourcesObject extends BaseClass {
 		Thread.sleep(3000);
 
 	}
-
 	public void clickLogout() throws InterruptedException {
 		profilebtn.click();
 		Thread.sleep(1000);
 		logout.click();
+		Thread.sleep(2000);
 	}
 
 	public void openUFNetActivity() {
