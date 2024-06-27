@@ -1,4 +1,7 @@
 pipeline {
+agent {
+        label 'Built-InNode'  // Replace with the label of your Jenkins agent
+    }
 
     environment {
         EDGE_DRIVER_PATH = 'C:/Users/proou/software/edgedriver_win64/msedgedriver.exe'
