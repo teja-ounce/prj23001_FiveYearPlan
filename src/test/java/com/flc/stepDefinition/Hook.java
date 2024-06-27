@@ -25,10 +25,10 @@ public class Hook {
 			if (driver instanceof TakesScreenshot) {
 				final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 				scenario.attach(screenshot, "image/png", "Screenshot");
-				DriverFactory.closeDriver();
+//				DriverFactory.closeDriver();
 			}
 		} else {
-			DriverFactory.closeDriver();
+//			DriverFactory.closeDriver();
 		}
 	}
 
