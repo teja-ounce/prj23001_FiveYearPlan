@@ -245,28 +245,28 @@ public class DataSourcesObject extends BaseClass {
 		deletebtn.click();
 		Thread.sleep(1000);
 		deleteConformationbtn.click();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 	}
 
 	public void clickUFnetActivityDelete() throws InterruptedException {
 		UFNetActivityDeletebtn.click();
 		Thread.sleep(1000);
 		deleteConformationbtn.click();
-		Thread.sleep(1000);
+		Thread.sleep(7000);
 	}
 
 	public void clickObligationDelete() throws InterruptedException {
 		obligationDeletebtn.click();
 		Thread.sleep(1000);
 		deleteConformationbtn.click();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 	}
 
 	public void clickMdufaDelete() throws InterruptedException {
 		mdufaDeletebtn.click();
 		Thread.sleep(1000);
 		deleteConformationbtn.click();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 	}
 
 	public void clickCollectionsTab() throws InterruptedException {
