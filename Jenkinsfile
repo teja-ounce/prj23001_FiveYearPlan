@@ -39,6 +39,8 @@ agent {
                 bat 'allure generate allure-results --clean -o allure-report'
                 archiveArtifacts artifacts: 'allure-report/**', allowEmptyArchive: true
                 junit 'target/surefire-reports/*.xml'
-            }
-    }
-    }
+          	  }
+   		 }
+ 	 }
+  }
+ }
