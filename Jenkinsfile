@@ -1,6 +1,6 @@
 pipeline {
 agent {
-        label 'edge'  // Replace with the label of your Jenkins agent
+        label 'edge'
     }
 
     environment {
