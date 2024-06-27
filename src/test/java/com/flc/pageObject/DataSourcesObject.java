@@ -245,7 +245,7 @@ public class DataSourcesObject extends BaseClass {
 		deletebtn.click();
 		Thread.sleep(1000);
 		deleteConformationbtn.click();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 	}
 
 	public void clickUFnetActivityDelete() throws InterruptedException {
@@ -268,18 +268,6 @@ public class DataSourcesObject extends BaseClass {
 		deleteConformationbtn.click();
 		Thread.sleep(5000);
 	}
-
-//	public void takeScreenshot() throws IOException, InterruptedException {
-//
-//		TakesScreenshot ss = (TakesScreenshot) driver;
-//		File source = ss.getScreenshotAs(OutputType.FILE);
-//		File destination = new File(
-//				"C:\\Users\\Teja-OUNCE\\git\\repository\\prj231001CucumberBDD\\src\\test\\resources\\screenshots"
-//						+ ".png");
-//		Files.copy(source, destination);
-//		Thread.sleep(2000);
-//
-//	}
 
 	public void clickCollectionsTab() throws InterruptedException {
 		collections.click();
