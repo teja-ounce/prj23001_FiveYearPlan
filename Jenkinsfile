@@ -19,7 +19,7 @@ agent {
         stage('Test') {
             steps {
                 dir('C:/Proounce Project/prj23001_FiveYearPlan') {
-                   bat "mvn test -Dcucumber.options=\"src/test/resources/features\"
+                   bat "mvn test -Dcucumber.options=/src/test/resources/features/"
                 }
             }
         }
