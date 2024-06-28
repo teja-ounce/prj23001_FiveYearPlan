@@ -17,8 +17,8 @@ public class DataSourcesObject extends BaseClass {
 		super(driver);
 	}
 
-	public String wordFile = "C:\\Users\\proou\\eclipse-workspace\\prj23001_cucumber-master\\prj23001_cucumber-master\\src\\test\\resources\\files\\testingPurpose.docx";
-	public String excel = "C:\\Users\\proou\\eclipse-workspace\\prj23001_cucumber-master\\prj23001_cucumber-master\\src\\test\\resources\\files\\testingExcel.xlsx";
+	public String wordFile = "C:\\Proounce Project\\prj23001_FiveYearPlan\\src\\test\\resources\\files\\testingPurpose.docx";
+	public String excel = "C:\\Proounce Project\\prj23001_FiveYearPlan\\src\\test\\resources\\files\\testingExcel.xlsx";
 	
 	
 	
