@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "C:\\Proounce Project\\prj23001_FiveYearPlan\\src\\test\\resources\\features",
+@CucumberOptions(features = "C:\\Proounce Project\\prj23001_FiveYearPlan\\src\\test\\resources\\features\\DataSources.feature",
 
 		glue = { "com.flc.stepDefinition" }, monochrome = true,
 
