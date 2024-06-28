@@ -1,11 +1,8 @@
 pipeline {
 agent {
-        label 'edge'
+        label 'FYP_Jenkins'
     }
 
-    environment {
-        EDGE_DRIVER_PATH = 'C:/Users/proou/software/edgedriver_win64/msedgedriver.exe'
-    }
     stages {
         stage('Checkout') {
             steps {
@@ -14,21 +11,20 @@ agent {
         }
         stage('Build') {
             steps {
-                dir('C:/Users/proou/eclipse-workspace/prj23001_cucumber-master/prj23001_cucumber-master') {
+                dir('C:/Proounce Project/prj23001_FiveYearPlan') {
                     bat 'mvn clean'
                 }
             }
         }
         stage('Test') {
             steps {
-                dir('C:/Users/proou/eclipse-workspace/prj23001_cucumber-master/prj23001_cucumber-master') {
-                   bat "mvn test -Dcucumber.options=\"src/test/resources/features\" -Dwebdriver.edge.driver=${EDGE_DRIVER_PATH}"
-                }
+                dir('C:/Proounce Project/prj23001_FiveYearPlan') {
+                   bat "mvn test -Dcucumber.options=\"src/test/resources/features\"                }
             }
         }
         stage('Allure Report') {
             steps {
-                dir('C:/Users/proou/eclipse-workspace/prj23001_cucumber-master/prj23001_cucumber-master') {
+                dir('C:/Proounce Project/prj23001_FiveYearPlan') {
                      bat 'allure generate allure-results --clean'
                 }
                 }
@@ -36,7 +32,7 @@ agent {
         }
         post {
         always {
-            dir('C:/Users/proou/eclipse-workspace/prj23001_cucumber-master/prj23001_cucumber-master') {
+            dir('C:/Proounce Project/prj23001_FiveYearPlan') {
                 bat 'allure generate allure-results --clean -o allure-report'
                 archiveArtifacts artifacts: 'allure-report/**', allowEmptyArchive: true
                 junit 'target/surefire-reports/*.xml'
