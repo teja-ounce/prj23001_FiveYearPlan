@@ -1,6 +1,6 @@
 pipeline {
 agent {
-        label 'FYP_Jenkins'
+        label 'Built-In Node'
     }
 
     stages {
