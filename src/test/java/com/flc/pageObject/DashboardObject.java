@@ -59,16 +59,14 @@ public class DashboardObject extends BaseClass {
 	@FindBy(xpath = "//*[@id='shareViaEmail']/div/div/div/div/label[2]/span[1]/input")
 	public WebElement adminButton;
 	
-	
-
 	public void clickFiveYearPlan() throws InterruptedException {
 		fiveYearPlanButton.click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(outerName));
-		userChangeButton.click();
-		Thread.sleep(2000);
-		adminButton.click();
-		Thread.sleep(2000);
+//		userChangeButton.click();
+//		Thread.sleep(2000);
+//		adminButton.click();
+//		Thread.sleep(2000);
 	}
 
 	public void clickConsolidateStatement() throws InterruptedException {
