@@ -1,4 +1,7 @@
 pipeline {
+agent {
+        label 'FYP_Jenkins'
+    }
 
     stages {
         stage('Checkout') {
