@@ -27,6 +27,9 @@ public class DriverFactory {
 			driver = new EdgeDriver();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
+			driver.navigate().refresh();
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			
 			EdgeOptions options = new EdgeOptions();
 	        options.addArguments("--headless"); // Run in headless mode
 	        options.addArguments("--disable-dev-shm-usage"); // Disable GPU (often used with headless)
