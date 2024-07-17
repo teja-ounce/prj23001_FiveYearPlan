@@ -56,7 +56,7 @@ public class DashboardObject extends BaseClass {
 	@FindBy(xpath = "//*[@id='single-spa-application:@flc/fiveyearplan-app']/div/header/div/div/div/div[3]/button")
 	public WebElement userChangeButton;
 	
-	@FindBy(xpath = "//*[@id='shareViaEmail']/div/div/div/div/label[2]/span[1]/input")
+	@FindBy(xpath = "//*[@id='shareViaEmail']/div/div/div/div/label[1]/span[1]/input")
 	public WebElement adminButton;
 	
 	public void clickFiveYearPlan() throws InterruptedException {
